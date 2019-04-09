@@ -1,0 +1,44 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# ---------------------------------------------------------------------------
+# "OrdererOrgs" - Definition of organizations managing orderer nodes
+# ---------------------------------------------------------------------------
+OrdererOrgs:
+  # ---------------------------------------------------------------------------
+  # Orderer
+  # ---------------------------------------------------------------------------
+  - Name: huawei
+    Domain: huawei.com
+    # ---------------------------------------------------------------------------
+    # "Specs" - See PeerOrgs below for complete description
+    # ---------------------------------------------------------------------------
+    Specs:
+      - Hostname: orderer.huawei.com
+        CommonName: orderer.huawei.com
+# ---------------------------------------------------------------------------
+# "PeerOrgs" - Definition of organizations managing peer nodes
+# ---------------------------------------------------------------------------
+PeerOrgs:
+  # ---------------------------------------------------------------------------
+  # Org1
+  # ---------------------------------------------------------------------------
+  - Name: baidu
+    Domain: baidu.com
+    Specs:
+      - Hostname: peer1.baidu.com
+        CommonName: peer1.baidu.com
+      - Hostname: peer2.baidu.com
+        CommonName: peer2.baidu.com
+  # ---------------------------------------------------------------------------
+  # Org2
+  # ---------------------------------------------------------------------------
+  - Name: jd
+    Domain: jd.com
+    Specs:
+    - Hostname: peer1.jd.com
+      CommonName: peer1.jd.com
+    - Hostname: peer2.jd.com
+      CommonName: peer2.jd.com
